@@ -23,7 +23,7 @@ delb.appendChild(document.createTextNode('X'));
 li.appendChild(delb);
 
 var editb=document.createElement("button");
-editb.className="btn btn-dark btn-sm float-right";
+editb.className="btn btn-dark btn-sm float-right edit";
 editb.appendChild(document.createTextNode('Edit'));
 li.appendChild(editb);
 
@@ -50,7 +50,7 @@ var li=document.getElementsByClassName("list-group-item");
 for(var i=0;i<li.length;i++)
 {
 var editb=document.createElement("button");
-editb.className="btn btn-dark btn-sm float-right";
+editb.className="btn btn-dark btn-sm float-right edit";
 editb.appendChild(document.createTextNode('Edit'));
 li[i].appendChild(editb);
 
