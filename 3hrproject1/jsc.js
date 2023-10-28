@@ -17,6 +17,7 @@ function submitForm(e)
 else{
     e.preventDefault();
    form.classList.add('was-validated');
+
     obj.amount=document.getElementById('exp').value;
     obj.des=document.getElementById('expdes').value;
     obj.cat=document.getElementById('cat').value;

@@ -9,7 +9,7 @@
   <title>Expense Tracker</title>
 </head>
 <body>
-  <header id="main-header" class="bg-success text-white p-4 mb-3">
+  <header id="main-header" class="bg-info text-white p-4 mb-5">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -19,8 +19,9 @@
     </div>
   </header>
   <div class="container">
-   <div id="main" class="card card-body">
-    <h2 class="title">Add Expense</h2>
+   <div id="main" class="card card-body w-50 mx-auto">
+    <h2 class="card-title">Add Expense</h2>
+    <br>
     <form id="addForm" novalidate>
        <div class="form-group">
         <label for="exp" class="form-label">Amount</label>
@@ -29,10 +30,12 @@
         <input type="number" class="form-control" id="exp" required>
       </div>
       </div>
+      <br>
       <div class="form-group">
       <label for="expdes" class="form-label">Description</label>
       <input type="text" class="form-control" id="expdes" placeholder="Description" required>
       </div>
+      <br>
       <div class="form-group">
         <label for="cat" class="form-label">Category</label>
       <select class="form-select" id="cat" required>
@@ -47,9 +50,7 @@
       </div>
       <br>
       <input type="submit" class="btn btn-dark" value="Submit">
-      
-    </form>
-    <h2 class="title">Expenses</h2>
+      </form>
     <ul id="items" class="list-group">
     </ul>
    </div>
