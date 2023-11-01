@@ -17,17 +17,29 @@ function updateLastUserActivityTime(){
         }, 1000)  
     })
 }
-
+function deletePost(){
+    return new Promise((resolve, reject) => {
+        setTimeout( () => {
+            if(posts.length > 0){
+                posts.pop();
+                resolve(posts);
+            } else {
+                reject("ERROR: ARRAY IS EMPTY")
+            }
+        }, 1000)
+})
+}
 Promise.all([createPost(),updateLastUserActivityTime()])
 .then(([res1,res2])=>{
     console.log(res1);
     console.log(res2);
+    deletePost().then((res3)=>{
+       console.log(res3)
+       deletePost().then((res3)=>{
+        console.log(res3)
+     }).catch((err)=>{
+       console.log(err)
+    })
+})
 })
 
-setTimeout( () => {
-    Promise.all([createPost(),updateLastUserActivityTime()])
-.then(([res1,res2])=>{
-    console.log(res1);
-    console.log(res2);
-})
-  }, 2000) 
